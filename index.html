@@ -271,6 +271,37 @@
     .scene{height:340px}
   }
 
+  /* ---------- offre ---------- */
+  section.offre{padding:110px 20px;border-top:1px solid var(--filet)}
+  .offre-box{display:grid;gap:0;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 1px 0 var(--filet),0 30px 60px -40px rgba(31,26,28,.35)}
+  @media(min-width:860px){.offre-box{grid-template-columns:1fr 1.2fr}}
+  .prix{background:var(--encre);color:#fff;padding:48px 40px;display:flex;flex-direction:column;justify-content:center}
+  .prix small{font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.6}
+  .prix .montant{font-family:"Cormorant Garamond",serif;font-size:clamp(54px,7vw,76px);line-height:1;margin:14px 0 6px}
+  .prix .montant span{font-size:.38em;letter-spacing:.06em;opacity:.8;margin-left:6px}
+  .prix .ht{font-size:13px;opacity:.7}
+  .prix .rule{margin:26px 0 0;background:linear-gradient(90deg,#7A2843 50%,#036A50 50%);width:72px;height:3px}
+  .etapes{padding:44px 40px}
+  .etapes h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:28px;margin-bottom:22px}
+  .etapes ol{list-style:none;counter-reset:e}
+  .etapes li{counter-increment:e;display:grid;grid-template-columns:44px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--filet);font-size:15px}
+  .etapes li:last-child{border:0}
+  .etapes li::before{content:"0" counter(e);font-family:"Cormorant Garamond",serif;font-size:24px;line-height:1;color:var(--gris)}
+  .etapes li b{font-weight:500;display:block}
+  .livrables{margin-top:22px;background:#fff;border-radius:4px;padding:40px;box-shadow:0 1px 0 var(--filet)}
+  .livrables h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:28px}
+  .livrables > p{color:var(--gris);font-size:14px;margin:4px 0 26px}
+  .liv-grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:700px){.liv-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.liv-grid{grid-template-columns:repeat(3,1fr)}}
+  .liv{border:1px solid var(--filet);border-radius:4px;padding:20px 20px 22px}
+  .liv i{display:block;width:28px;height:3px;background:var(--or);margin-bottom:14px}
+  .liv b{display:block;font-weight:500;margin-bottom:4px}
+  .liv span{font-size:14px;color:#5a4f54}
+  .avert{margin-top:22px;padding:18px 22px;border-left:3px solid var(--or);background:#fff;font-size:14px;color:#4c4146}
+  .avert b{font-weight:500}
+  .contact{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;color:var(--gris)}
+  .contact b{color:var(--encre);font-weight:500}
   @media print{body{display:none}}
 </style>
 </head>
@@ -573,6 +604,61 @@
         <tr><td>Petites tailles</td><td>Calligraphie à prévoir en version simplifiée</td><td>Très bonne lisibilité</td></tr>
         <tr><td>Couleurs</td><td>Bordeaux, or</td><td>Vert profond, sable</td></tr>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- Offre -->
+<section class="offre" id="offre">
+  <div class="wrap">
+    <div class="head reveal" style="margin-bottom:36px">
+      <div class="num" style="color:var(--encre);font-size:80px">DA</div>
+      <div>
+        <div class="eyebrow">Proposition commerciale</div>
+        <h2>Conditions et prochaines étapes</h2>
+        <div class="ar" style="color:var(--gris)">الشروط والخطوات القادمة</div>
+      </div>
+    </div>
+
+    <div class="offre-box reveal">
+      <div class="prix">
+        <small>Création du logo</small>
+        <div class="montant">100 000<span>DA</span></div>
+        <div class="ht">Montant forfaitaire · non assujetti à la TVA</div>
+        <div class="rule"></div>
+      </div>
+      <div class="etapes">
+        <h3>Comment ça se passe</h3>
+        <ol>
+          <li><div><b>Choix du concept</b>La faculté retient le concept A ou le concept B.</div></li>
+          <li><div><b>Bon de commande</b>La faculté nous adresse un bon de commande de 100 000 DA.</div></li>
+          <li><div><b>Validation</b>Après réception du bon de commande, nous finalisons le concept retenu et le soumettons à votre validation.</div></li>
+          <li><div><b>Livraison</b>Après réception du paiement, nous vous remettons la version finale et l'ensemble des fichiers ci-dessous.</div></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="livrables reveal">
+      <h3>Ce que vous recevez</h3>
+      <p>Remis après réception du paiement, pour le concept retenu.</p>
+      <div class="liv-grid">
+        <div class="liv"><i></i><b>Fichiers sources</b><span>Fichiers vectoriels modifiables (AI, PDF, SVG), utilisables à toutes les tailles sans perte de qualité.</span></div>
+        <div class="liv"><i></i><b>Exports prêts à l'emploi</b><span>PNG haute définition sur fond transparent et JPG, pour l'impression comme pour l'écran.</span></div>
+        <div class="liv"><i></i><b>Déclinaisons du logo</b><span>Versions verticale et horizontale, couleur, monochrome et négatif sur fond foncé.</span></div>
+        <div class="liv"><i></i><b>Réseaux sociaux</b><span>Photo de profil et visuels de couverture adaptés à Facebook, Instagram, LinkedIn et YouTube.</span></div>
+        <div class="liv"><i></i><b>Web et digital</b><span>Icône du site (favicon), en-tête web et signature d'e-mail.</span></div>
+        <div class="liv"><i></i><b>Mini charte graphique</b><span>Couleurs officielles (codes CMJN, RVB, HEX), typographies et règles d'utilisation du logo.</span></div>
+      </div>
+    </div>
+
+    <div class="avert reveal">
+      <b>À noter :</b> les visuels présentés sur cette page (façade, carte d'étudiant, diplôme, objets, site web…) sont des <b>mock-ups</b>, c'est-à-dire des simulations destinées à illustrer le rendu du logo en situation réelle. Ils ne sont ni des réalisations ni des éléments compris dans l'offre. Les logos eux-mêmes restent des propositions jusqu'à la validation de la version finale.
+    </div>
+
+    <div class="contact reveal">
+      <span><b>Webminds Digital Solutions</b></span>
+      <span>Walid Saoudi · 0797 37 24 52</span>
+      <span>wsaoudi@webminds.dz</span>
     </div>
   </div>
 </section>
