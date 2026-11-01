@@ -125,6 +125,152 @@
 
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
   .reveal.in{opacity:1;transform:none}
+  /* ---------- mises en situation ---------- */
+  body{--p:#7A2843;--acc:#E5A019;--soft:#F3E7EB;--deep:#4E1529}
+  body.b{--p:#036A50;--acc:#D9C29A;--soft:#E4EFEA;--deep:#01402F}
+  section.situ{padding:110px 20px;border-top:1px solid var(--filet)}
+  .switch{display:inline-flex;background:#fff;border-radius:99px;padding:5px;margin:0 0 40px;box-shadow:0 1px 0 var(--filet);flex-wrap:wrap}
+  .switch button{border:0;background:none;font:inherit;font-size:14px;padding:10px 20px;border-radius:99px;cursor:pointer;color:var(--gris);transition:.3s}
+  .switch button.on{background:var(--p);color:#fff}
+  .grid{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}.span2{grid-column:span 2}}
+  .m figcaption{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);padding:14px 4px 0}
+  .scene{position:relative;border-radius:4px;overflow:hidden;height:380px;display:grid;place-items:center}
+  .scene img{transition:opacity .35s}
+  .scene .ar{font-family:"Amiri",serif}
+  .fade img[data-logo]{opacity:0}
+
+  /* façade */
+  .facade{background:linear-gradient(#cfd8de,#e9e4dc)}
+  .facade .sky{position:absolute;inset:0;background:radial-gradient(80% 60% at 70% 0%,#fff9,transparent)}
+  .facade .wall{position:absolute;left:6%;right:6%;bottom:0;top:12%;
+    background:repeating-linear-gradient(0deg,transparent 0 46px,rgba(0,0,0,.05) 46px 47px),linear-gradient(#efe7da,#e2d6c4);
+    box-shadow:0 -10px 40px rgba(0,0,0,.08)}
+  .facade .sign{position:absolute;left:50%;top:13%;transform:translateX(-50%);display:flex;align-items:center;gap:22px;
+    background:var(--p);padding:16px 28px 16px 18px;border-bottom:4px solid var(--acc);box-shadow:0 18px 30px -12px rgba(0,0,0,.45);transition:background .5s;white-space:nowrap;width:max-content}
+  .facade .sign img{height:96px;width:auto;filter:drop-shadow(0 0 1px rgba(255,255,255,.4))}
+  .sign-txt{color:#fff}
+  .sign-txt .ar{font-size:30px;line-height:1.2}
+  .sign-txt .fr{font-family:"Cormorant Garamond",serif;font-size:21px;letter-spacing:.04em}
+  .sign-txt .u{font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:4px}
+  .facade .door{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:170px;height:118px;display:flex;gap:4px;padding:6px;background:#3b3437;border-radius:90px 90px 0 0;overflow:hidden}
+  .facade .door i{flex:1;background:linear-gradient(135deg,#7f97a6,#3f5562 60%,#5f7684)}
+  .facade .step{position:absolute;left:0;right:0;bottom:0;height:22px;background:#d4c7b3;border-top:1px solid #c2b39c}
+
+  /* kakémono */
+  .roll{background:linear-gradient(#ece6dd,#d9d0c3)}
+  .roll .banner{width:150px;height:330px;background:var(--p);color:#fff;text-align:center;padding:22px 14px;display:flex;flex-direction:column;align-items:center;
+    box-shadow:14px 18px 30px -12px rgba(0,0,0,.4);transition:background .5s;position:relative;top:-10px}
+  .roll .banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08),transparent 40%,rgba(0,0,0,.08))}
+  .roll .banner img{height:92px;width:auto;margin-bottom:14px}
+  .roll .banner .ar{font-size:17px;color:var(--acc)}
+  .roll .banner .t{font-family:"Cormorant Garamond",serif;font-size:24px;line-height:1.05;margin:6px 0 10px}
+  .roll .banner .d{font-size:10px;letter-spacing:.12em;border-top:1px solid var(--acc);padding-top:8px}
+  .roll .banner .f{font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-top:auto;opacity:.8}
+  .roll .foot{position:absolute;bottom:22px;width:170px;height:10px;border-radius:6px;background:#a9a3a0;box-shadow:0 8px 14px rgba(0,0,0,.25)}
+
+  /* carte d'étudiant */
+  .desk{background:radial-gradient(70% 70% at 50% 40%,#f4efe8,#d8cfc3)}
+  .idcard{width:300px;height:190px;background:#fff;border-radius:12px;overflow:hidden;transform:rotate(-6deg);box-shadow:0 26px 40px -18px rgba(0,0,0,.45)}
+  .idcard .band{height:58px;background:var(--p);display:flex;align-items:center;gap:12px;padding:0 14px;color:#fff;font-size:11px;letter-spacing:.08em;line-height:1.25;transition:background .5s}
+  .idcard .band img{height:42px;width:auto}
+  .idcard .band b{font-family:"Amiri",serif;font-weight:400;font-size:13px;color:var(--acc);letter-spacing:0}
+  .idcard .body{display:flex;gap:12px;padding:14px;position:relative}
+  .idcard .photo{width:62px;height:78px;background:#ece8e9;border-radius:4px;display:grid;place-items:end center;overflow:hidden}
+  .idcard .photo svg{width:52px}
+  .idcard .info{display:flex;flex-direction:column;font-size:10px;color:#5a5055;gap:3px}
+  .idcard .info b{font-size:13px;color:var(--encre);font-weight:500}
+  .idcard .qr{position:absolute;right:14px;bottom:12px;width:44px;height:44px;
+    background:conic-gradient(from 90deg,#222 25%,#fff 0 50%,#222 0 75%,#fff 0) 0 0/11px 11px;border:3px solid #fff;outline:1px solid #ddd}
+
+  /* diplôme */
+  .wood{background:linear-gradient(115deg,#6b4a35,#8a6447 45%,#5e402d)}
+  .diploma{width:240px;height:320px;background:#fbf7ee;padding:20px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;
+    outline:1px solid var(--acc);outline-offset:-10px;box-shadow:0 30px 40px -20px rgba(0,0,0,.6);transform:rotate(3deg);position:relative}
+  .diploma img{height:120px;width:auto;margin:8px 0 12px}
+  .diploma .dt{font-family:"Cormorant Garamond",serif;font-size:19px;font-style:italic}
+  .diploma .ar{font-size:16px;color:var(--p);margin-bottom:12px}
+  .diploma i{display:block;height:4px;width:90%;background:#e7dfd0;border-radius:3px;margin:5px 0}
+  .diploma .seal{position:absolute;right:26px;bottom:24px;width:42px;height:42px;border-radius:50%;background:var(--acc);
+    box-shadow:inset 0 0 0 4px rgba(255,255,255,.35),0 2px 4px rgba(0,0,0,.25);transition:background .5s}
+
+  /* tote bag */
+  .tote-bg{background:linear-gradient(#e4e9e7,#cfd6d3)}
+  .tote{position:relative;width:210px}
+  .tote .handle{width:110px;height:90px;margin:0 auto -14px;border:12px solid #d8ccb4;border-bottom:0;border-radius:60px 60px 0 0}
+  .tote .bag{height:250px;background:linear-gradient(90deg,#e9dfca,#efe6d4 30%,#e3d8c2);display:grid;place-items:center;
+    box-shadow:0 26px 36px -20px rgba(0,0,0,.45);background-image:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,0,0,.025) 2px 3px),linear-gradient(90deg,#e9dfca,#efe6d4 30%,#e3d8c2)}
+  .tote .bag img{height:170px;width:auto;mix-blend-mode:multiply}
+
+  /* mug + carnet */
+  .desk2{background:radial-gradient(70% 70% at 40% 40%,#f2ece4,#d6ccc0)}
+  .notebook{position:absolute;left:12%;top:16%;width:160px;height:220px;background:var(--p);border-radius:4px 10px 10px 4px;transform:rotate(-8deg);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:inset 10px 0 0 rgba(0,0,0,.15),0 24px 30px -16px rgba(0,0,0,.5);transition:background .5s}
+  .notebook img{height:86px;width:auto}
+  .notebook span{color:var(--acc);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+  .mug{position:absolute;right:12%;bottom:16%;display:flex;align-items:center}
+  .mug .cup{width:120px;height:140px;border-radius:6px 6px 22px 22px;display:grid;place-items:center;
+    background:linear-gradient(90deg,#d9d6d2,#fff 35%,#f3f1ee 60%,#c9c5c0);box-shadow:0 22px 26px -14px rgba(0,0,0,.45)}
+  .mug .cup img{height:76px;width:auto}
+  .mug .ear{width:40px;height:66px;border:11px solid #e9e6e2;border-left:0;border-radius:0 34px 34px 0;margin-left:-4px}
+
+  /* site web */
+  .web-bg{background:linear-gradient(135deg,#dfe3e6,#c9cfd4)}
+  .browser{width:88%;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 30px 50px -24px rgba(0,0,0,.45)}
+  .browser .bar{height:30px;background:#eef0f2;display:flex;align-items:center;gap:6px;padding:0 12px}
+  .browser .bar i{width:9px;height:9px;border-radius:50%;background:#d0d3d6}
+  .browser .bar span{margin-left:14px;font-size:11px;color:#8a8f94;background:#fff;padding:3px 14px;border-radius:99px}
+  .site .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid #eee;gap:10px}
+  .site .lock{display:flex;align-items:center;gap:10px}
+  .site .lock img{height:38px;width:auto}
+  .site .lock b{display:block;font-family:"Cormorant Garamond",serif;font-size:15px;font-weight:600;line-height:1.1}
+  .site .lock small{font-size:12px;color:var(--p)}
+  .site .links{display:flex;gap:16px;font-size:11px;color:#666}
+  @media(max-width:700px){.site .links{display:none}}
+  .site .hero{background:var(--p);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:28px 30px;transition:background .5s;overflow:hidden}
+  .site .hero small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+  .site .hero h4{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(22px,3vw,32px);line-height:1.1;margin:8px 0 14px}
+  .site .hero .btn{display:inline-block;font-size:11px;background:var(--acc);color:var(--deep);padding:8px 14px;border-radius:2px}
+  .site .hero img{height:150px;width:auto;opacity:.95;margin-right:10px;transform:rotate(6deg)}
+
+  /* réseaux sociaux */
+  .phone-bg{background:linear-gradient(160deg,#e9e2ea,#d4cfd8)}
+  .phone{width:180px;height:340px;background:#fff;border-radius:26px;border:7px solid #1d1d1f;overflow:hidden;text-align:center;box-shadow:0 30px 40px -20px rgba(0,0,0,.5);position:relative}
+  .phone .pcover{height:80px;background:linear-gradient(135deg,var(--p),var(--deep));transition:background .5s}
+  .phone .avatar{width:68px;height:68px;border-radius:50%;background:#fff;margin:-34px auto 8px;display:grid;place-items:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15);overflow:hidden}
+  .phone .avatar img{height:54px;width:auto}
+  .phone b{display:block;font-size:11px;font-weight:500;padding:0 10px}
+  .phone small{font-size:10px;color:#888;font-family:"Amiri",serif}
+  .phone .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:14px}
+  .phone .posts i{aspect-ratio:1;background:var(--soft);transition:background .5s}
+  .phone .posts i:nth-child(2),.phone .posts i:nth-child(6){background:var(--p)}
+  .phone .posts i:nth-child(4){background:var(--acc)}
+
+  /* badge colloque */
+  .badge-bg{background:linear-gradient(#e7e3dc,#d3cdc4)}
+  .lanyard{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:110px;border:9px solid var(--p);border-top:0;border-radius:0 0 60px 60px;transition:border-color .5s}
+  .pass{width:150px;height:220px;background:#fff;border-radius:8px;overflow:hidden;margin-top:70px;box-shadow:0 24px 30px -16px rgba(0,0,0,.45);text-align:center}
+  .pass .ptop{height:86px;background:var(--soft);display:grid;place-items:center;transition:background .5s}
+  .pass .ptop img{height:64px;width:auto}
+  .pass .pmid{padding:12px 10px;display:flex;flex-direction:column;gap:6px}
+  .pass small{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#888}
+  .pass b{font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.05;font-weight:500}
+  .pass span{font-size:9px;letter-spacing:.2em;background:var(--p);color:#fff;padding:5px;border-radius:2px;margin-top:4px;transition:background .5s}
+
+  /* signalétique */
+  .corridor{background:linear-gradient(90deg,#d9d4cc,#ece8e1 50%,#d6d0c7)}
+  .plaque{display:flex;align-items:center;gap:16px;background:#fff;padding:20px 24px;border-left:6px solid var(--p);box-shadow:0 18px 28px -16px rgba(0,0,0,.4);transition:border-color .5s}
+  .plaque img{height:80px;width:auto}
+  .plaque .ar{display:block;font-size:20px;color:var(--p)}
+  .plaque b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:500}
+  .plaque small{font-size:10px;color:var(--gris);letter-spacing:.06em}
+
+  @media(max-width:520px){
+    .facade .sign{transform:translateX(-50%) scale(.62);transform-origin:top center}
+    .scene{height:340px}
+  }
+
   @media print{body{display:none}}
 </style>
 </head>
@@ -190,19 +336,6 @@
       </div>
     </div>
 
-    <div class="mock reveal">
-      <div class="letter">
-        <div class="top">
-          <img src="logo-a-horizontal.jpg" alt="">
-          <div class="ref">Réf. FLL/2026<br>Boumerdès, le 2 novembre 2026</div>
-        </div>
-        <div class="lines"><i style="width:40%"></i><i></i><i></i><i style="width:85%"></i><i></i><i style="width:60%"></i></div>
-        <div class="foot" style="background:linear-gradient(90deg,var(--bordeaux) 80%,var(--or) 80%)"></div>
-      </div>
-      <div class="badge" style="background:var(--bordeaux)">
-        <div class="tile"><img src="logo-a-vertical.jpg" alt=""></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -244,18 +377,179 @@
       </div>
     </div>
 
-    <div class="mock reveal">
-      <div class="letter">
-        <div class="top">
-          <img src="logo-b-plume.jpg" alt="">
-          <div class="ref">Réf. FLL/2026<br>Boumerdès, le 2 novembre 2026</div>
+  </div>
+</section>
+
+<!-- En situation -->
+<section class="situ" id="situations">
+  <div class="wrap">
+    <div class="head reveal" style="margin-bottom:28px">
+      <div class="num" style="color:var(--p);transition:color .5s">✦</div>
+      <div>
+        <div class="eyebrow">Mises en situation</div>
+        <h2>Le logo dans la vie de la faculté</h2>
+        <div class="ar" style="color:var(--p);transition:color .5s">الشعار في الحياة الجامعية</div>
+        <p>De la façade à la carte d'étudiant, voici comment chaque concept s'installe dans le quotidien de la faculté. Basculez d'un concept à l'autre pour comparer.</p>
+      </div>
+    </div>
+
+    <div class="switch reveal" role="tablist">
+      <button class="on" data-set="a">Concept A · Calligraphie</button>
+      <button data-set="b">Concept B · Plume et arche</button>
+    </div>
+
+    <div class="grid">
+
+      <!-- Façade -->
+      <figure class="m span2 reveal">
+        <div class="scene facade">
+          <div class="sky"></div>
+          <div class="wall">
+            <div class="sign">
+              <img data-logo="icon" src="a-icon.png" alt="">
+              <div class="sign-txt">
+                <div class="ar">كلية الآداب واللغات</div>
+                <div class="fr">Faculté des Lettres et des Langues</div>
+                <div class="u">Université M'Hamed Bougara · Boumerdès</div>
+              </div>
+            </div>
+            <div class="door"><i></i><i></i></div>
+            <div class="step"></div>
+          </div>
         </div>
-        <div class="lines"><i style="width:40%"></i><i></i><i></i><i style="width:85%"></i><i></i><i style="width:60%"></i></div>
-        <div class="foot" style="background:linear-gradient(90deg,var(--vert) 80%,var(--sable) 80%)"></div>
-      </div>
-      <div class="badge" style="background:var(--vert)">
-        <div class="tile"><img src="logo-b-plume.jpg" alt=""></div>
-      </div>
+        <figcaption>Façade de l'entrée principale</figcaption>
+      </figure>
+
+      <!-- Kakémono -->
+      <figure class="m reveal">
+        <div class="scene roll">
+          <div class="banner">
+            <img data-logo="icon" src="a-icon.png" alt="">
+            <div class="ar">الأيام الدراسية</div>
+            <div class="t">Journées<br>d'études<br>doctorales</div>
+            <div class="d">12 — 14 décembre 2026</div>
+            <div class="f">Faculté des Lettres et des Langues</div>
+          </div>
+          <div class="foot"></div>
+        </div>
+        <figcaption>Kakémono événementiel</figcaption>
+      </figure>
+
+      <!-- Carte d'étudiant -->
+      <figure class="m reveal">
+        <div class="scene desk">
+          <div class="idcard">
+            <div class="band"><img data-logo="icon" src="a-icon.png" alt=""><span>Carte d'étudiant<br><b class="ar">بطاقة الطالب</b></span></div>
+            <div class="body">
+              <div class="photo"><svg viewBox="0 0 40 46"><circle cx="20" cy="16" r="9" fill="#cfc6c9"/><path d="M3 46c1-11 8-17 17-17s16 6 17 17z" fill="#cfc6c9"/></svg></div>
+              <div class="info">
+                <b>Nom Prénom</b>
+                <span>Licence · Langue anglaise</span>
+                <span>Matricule 2026/FLL/0458</span>
+                <span>Année 2026 — 2027</span>
+              </div>
+              <div class="qr"></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Carte d'étudiant</figcaption>
+      </figure>
+
+      <!-- Diplôme -->
+      <figure class="m reveal">
+        <div class="scene wood">
+          <div class="diploma">
+            <img data-logo="v" src="a-v.png" alt="">
+            <div class="dt">Attestation de réussite</div>
+            <div class="ar">شهادة نجاح</div>
+            <i></i><i style="width:70%"></i><i style="width:84%"></i>
+            <div class="seal"></div>
+          </div>
+        </div>
+        <figcaption>Attestation et diplôme</figcaption>
+      </figure>
+
+      <!-- Tote bag -->
+      <figure class="m reveal">
+        <div class="scene tote-bg">
+          <div class="tote">
+            <div class="handle"></div>
+            <div class="bag"><img data-logo="v" src="a-v.png" alt=""></div>
+          </div>
+        </div>
+        <figcaption>Tote bag de rentrée</figcaption>
+      </figure>
+
+      <!-- Mug + carnet -->
+      <figure class="m reveal">
+        <div class="scene desk2">
+          <div class="notebook"><img data-logo="icon" src="a-icon.png" alt=""><span>Notes</span></div>
+          <div class="mug"><div class="cup"><img data-logo="icon" src="a-icon.png" alt=""></div><div class="ear"></div></div>
+        </div>
+        <figcaption>Papeterie et objets</figcaption>
+      </figure>
+
+      <!-- Site web -->
+      <figure class="m span2 reveal">
+        <div class="scene web-bg">
+          <div class="browser">
+            <div class="bar"><i></i><i></i><i></i><span>fll.univ-boumerdes.dz</span></div>
+            <div class="site">
+              <div class="nav">
+                <div class="lock"><img data-logo="icon" src="a-icon.png" alt=""><div><b>Faculté des Lettres et des Langues</b><small class="ar">كلية الآداب واللغات</small></div></div>
+                <div class="links"><span>Formations</span><span>Recherche</span><span>Étudiants</span><span>Actualités</span></div>
+              </div>
+              <div class="hero">
+                <div>
+                  <small>Rentrée universitaire 2026 — 2027</small>
+                  <h4>Les langues ouvrent<br>tous les horizons</h4>
+                  <span class="btn">Découvrir nos formations</span>
+                </div>
+                <img data-logo="icon" src="a-icon.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Site web de la faculté</figcaption>
+      </figure>
+
+      <!-- Réseaux sociaux -->
+      <figure class="m reveal">
+        <div class="scene phone-bg">
+          <div class="phone">
+            <div class="pcover"></div>
+            <div class="avatar"><img data-logo="icon" src="a-icon.png" alt=""></div>
+            <b>Faculté des Lettres et des Langues</b>
+            <small>كلية الآداب واللغات · UMBB</small>
+            <div class="posts"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <figcaption>Réseaux sociaux</figcaption>
+      </figure>
+
+      <!-- Badge colloque -->
+      <figure class="m reveal">
+        <div class="scene badge-bg">
+          <div class="lanyard"></div>
+          <div class="pass">
+            <div class="ptop"><img data-logo="icon" src="a-icon.png" alt=""></div>
+            <div class="pmid"><small>Colloque international</small><b>Traduction &amp;<br>Interculturalité</b><span>INTERVENANT</span></div>
+          </div>
+        </div>
+        <figcaption>Badge de colloque</figcaption>
+      </figure>
+
+      <!-- Signalétique intérieure -->
+      <figure class="m reveal">
+        <div class="scene corridor">
+          <div class="plaque">
+            <img data-logo="icon" src="a-icon.png" alt="">
+            <div><span class="ar">مدرج الآداب</span><b>Amphithéâtre A</b><small>Département de langue arabe</small></div>
+          </div>
+        </div>
+        <figcaption>Signalétique intérieure</figcaption>
+      </figure>
+
     </div>
   </div>
 </section>
@@ -294,6 +588,18 @@
     const k=e.key.toLowerCase();
     if(k==='f12'||(e.ctrlKey&&['u','s','p'].includes(k))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(k))||(e.metaKey&&['u','s','p'].includes(k)))e.preventDefault();
   });
+  const sets={a:{v:'a-v.png',icon:'a-icon.png'},b:{v:'b-v.png',icon:'b-icon.png'}};
+  document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.dataset.set;
+    document.querySelectorAll('.switch button').forEach(x=>x.classList.toggle('on',x===b));
+    const g=document.querySelector('.situ');g.classList.add('fade');
+    setTimeout(()=>{
+      document.body.classList.toggle('b',k==='b');
+      g.querySelectorAll('img[data-logo]').forEach(i=>i.src=sets[k][i.dataset.logo]);
+      g.classList.remove('fade');
+    },350);
+  }));
+  ['b-v.png','b-icon.png'].forEach(u=>{const i=new Image();i.src=u});
   const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
