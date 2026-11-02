@@ -315,6 +315,14 @@
   .fbtxt small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#1877F2}
   .fbtxt h4{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:30px;line-height:1.1;margin:10px 0 12px;color:#1F1A1C}
   .fbtxt p{font-size:15px;color:#4c4146}
+  .real{margin-top:70px}
+  .real .rh{margin-bottom:24px}
+  .real .rh small{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris)}
+  .real .rh h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(26px,3.4vw,38px);margin:6px 0}
+  .real .rh p{color:#4c4146;font-size:15px}
+  .rgrid{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:860px){.rgrid{grid-template-columns:1fr 1fr}.rgrid .wide{grid-column:1/-1}}
+  .rgrid img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 30px 50px -30px rgba(31,26,28,.45)}
   @media print{body{display:none}}
 </style>
 </head>
@@ -605,6 +613,15 @@
 
 
     </div>
+
+    <div class="real reveal">
+      <div class="rh"><small>Rendus réalistes</small><h3>Le logo en situation réelle</h3><p>Rendus 3D réalisés avec le logo définitif appliqué sur les supports.</p></div>
+      <div class="rgrid">
+        <figure class="m wide"><img data-logo="desk" src="r-a-desk.jpg" alt=""><figcaption>Papeterie : carnet, mug et carte d'étudiant</figcaption></figure>
+        <figure class="m"><img data-logo="facade" src="r-a-facade.jpg" alt=""><figcaption>Enseigne de la façade</figcaption></figure>
+        <figure class="m"><img data-logo="rollup" src="r-a-rollup.jpg" alt=""><figcaption>Kakémonos événementiels</figcaption></figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -698,7 +715,7 @@
     const k=e.key.toLowerCase();
     if(k==='f12'||(e.ctrlKey&&['u','s','p'].includes(k))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(k))||(e.metaKey&&['u','s','p'].includes(k)))e.preventDefault();
   });
-  const sets={a:{v:'a-v.png',icon:'a-icon.png',fb:'fb-a.jpg'},b:{v:'b-v.png',icon:'b-icon.png',fb:'fb-b.jpg'}};
+  const sets={a:{v:'a-v.png',icon:'a-icon.png',fb:'fb-a.jpg',desk:'r-a-desk.jpg',facade:'r-a-facade.jpg',rollup:'r-a-rollup.jpg'},b:{v:'b-v.png',icon:'b-icon.png',fb:'fb-b.jpg',desk:'r-b-desk.jpg',facade:'r-b-facade.jpg',rollup:'r-b-rollup.jpg'}};
   document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{
     const k=b.dataset.set;
     document.querySelectorAll('.switch button').forEach(x=>x.classList.toggle('on',x===b));
