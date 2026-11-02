@@ -320,6 +320,14 @@
   .lang a.ar-btn{font-family:"Amiri",serif;font-size:16px;padding:6px 20px}
   .lang a.on{background:#fff;color:#1F1A1C;opacity:1}
   footer{padding-bottom:110px!important}
+  .full{grid-column:1/-1}
+  .fbreal{height:auto;padding:50px 20px;background:linear-gradient(135deg,#e8eef8,#d9dfe9);display:flex;gap:44px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .fbphone{width:300px;border-radius:38px;border:10px solid #1d1d1f;overflow:hidden;background:#fff;box-shadow:0 40px 60px -30px rgba(0,0,0,.55)}
+  .fbphone img{width:100%;height:auto;display:block}
+  .fbtxt{max-width:340px;font-family:"Jost",sans-serif}
+  .fbtxt small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#1877F2}
+  .fbtxt h4{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:30px;line-height:1.1;margin:10px 0 12px;color:#1F1A1C}
+  .fbtxt p{font-size:15px;color:#4c4146}
   @media print{body{display:none}}
 </style>
 </head>
@@ -599,6 +607,16 @@
         <figcaption>اللافتات الداخلية</figcaption>
       </figure>
 
+      <!-- Page Facebook réelle -->
+      <figure class="m full reveal">
+        <div class="scene fbreal">
+          <div class="fbphone"><img data-logo="fb" src="fb-a.jpg" alt=""></div>
+          <div class="fbtxt" dir="rtl"><small>على صفحتكم الحقيقية</small><h4>صفحتكم على فيسبوك بالشعار الجديد</h4><p>محاكاة انطلاقاً من صفحتكم الحالية على فيسبوك (19 ألف متابع): تمّ تغيير صورة الملف الشخصي فقط بالشعار الجديد.</p></div>
+        </div>
+        <figcaption>على صفحتكم في فيسبوك</figcaption>
+      </figure>
+
+
     </div>
   </div>
 </section>
@@ -693,7 +711,7 @@
     const k=e.key.toLowerCase();
     if(k==='f12'||(e.ctrlKey&&['u','s','p'].includes(k))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(k))||(e.metaKey&&['u','s','p'].includes(k)))e.preventDefault();
   });
-  const sets={a:{v:'a-v.png',icon:'a-icon.png'},b:{v:'b-v.png',icon:'b-icon.png'}};
+  const sets={a:{v:'a-v.png',icon:'a-icon.png',fb:'fb-a.jpg'},b:{v:'b-v.png',icon:'b-icon.png',fb:'fb-b.jpg'}};
   document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{
     const k=b.dataset.set;
     document.querySelectorAll('.switch button').forEach(x=>x.classList.toggle('on',x===b));
@@ -704,7 +722,7 @@
       g.classList.remove('fade');
     },350);
   }));
-  ['b-v.png','b-icon.png'].forEach(u=>{const i=new Image();i.src=u});
+  ['b-v.png','b-icon.png','fb-b.jpg'].forEach(u=>{const i=new Image();i.src=u});
   const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
