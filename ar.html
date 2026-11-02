@@ -308,6 +308,7 @@
   [dir=rtl] *:not(.scene *){letter-spacing:0!important}
   [dir=rtl] .head .ar,[dir=rtl] .ar.fr{font-family:"Cormorant Garamond",serif;direction:ltr;text-align:right}
   [dir=rtl] .scene{direction:ltr}
+  @media(max-width:859px){[dir=rtl] .head .num{font-size:64px!important;line-height:1}}
   [dir=rtl] .cover h1 em{font-style:normal}
   [dir=rtl] .chip span{unicode-bidi:plaintext}
   [dir=rtl] .cover h1{line-height:1.35}
@@ -640,15 +641,15 @@
     <div class="offre-box reveal">
       <div class="prix">
         <small>تصميم الشعار</small>
-        <div class="montant">100 000<span>دج</span></div>
+        <div class="montant"><bdi dir="ltr">100 000</bdi><span>دج</span></div>
         <div class="ht">مبلغ جزافي · غير خاضع للرسم على القيمة المضافة</div>
         <div class="rule"></div>
       </div>
       <div class="etapes">
         <h3>كيف تسير العملية</h3>
         <ol>
-          <li><div><b>اختيار المقترح</b>تختار الكلية المقترح A أو المقترح B.</div></li>
-          <li><div><b>سند الطلب</b>ترسل لنا الكلية سند طلب بمبلغ 100 000 دج.</div></li>
+          <li><div><b>اختيار المقترح</b>تختار الكلية أحد المقترحين: A أو B</div></li>
+          <li><div><b>سند الطلب</b>ترسل لنا الكلية سند طلب بمبلغ <bdi dir="ltr">100 000</bdi> دج.</div></li>
           <li><div><b>المصادقة</b>بعد استلام سند الطلب، نُنجز الصيغة النهائية للمقترح المختار ونعرضها عليكم للمصادقة.</div></li>
           <li><div><b>التسليم</b>بعد استلام الدفع، نسلّمكم النسخة النهائية وجميع الملفات المذكورة أدناه.</div></li>
         </ol>
